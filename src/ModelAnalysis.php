@@ -87,12 +87,12 @@ class ModelAnalysis
     /**
      * Gets the type of the column from the database.
      *
-     * @param $table
-     * @param $column
+     * @param string $table
+     * @param string $column
      *
      * @return string
      */
-    private function getColumnType(string $table, string  $column)
+    private function getColumnType(string $table, string $column)
     {
         return DB::connection()->getDoctrineColumn($table, $column)->getType()->getName();
     }
