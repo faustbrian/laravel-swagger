@@ -1,12 +1,21 @@
 <?php
 
+/*
+ * This file is part of Laravel Swagger.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Swagger\Http\Controllers;
 
-use File;
 use BrianFaust\Swagger\Generator;
-use Illuminate\Routing\Controller as BaseController;
+use File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Controller as BaseController;
 
 class SwaggerController extends BaseController
 {
