@@ -34,21 +34,11 @@ class ModelAnalysis
     }
 
     /**
-     * The handler which is called on process.
-     *
-     * @param \Swagger\Analysis $analysis
-     */
-    public function __invoke(Analysis $analysis)
-    {
-        $this->loadModels($analysis);
-    }
-
-    /**
      * Load the given Eloquent Models into Swagger.
      *
      * @param \Swagger\Analysis $analysis
      */
-    private function loadModels(Analysis $analysis)
+    public function __invoke(Analysis $analysis)
     {
         foreach ($this->models as $model) {
             $obj = new $model();
