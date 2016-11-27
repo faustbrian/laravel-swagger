@@ -1,0 +1,43 @@
+{
+    "name": "faustbrian/laravel-swagger",
+    "description": "Swagger UI Integration for Laravel",
+    "keywords": ["laravel", "framework", "Laravel-Swagger", "Laravel Swagger", "Brian Faust", "faustbrian"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Brian Faust",
+        "email": "hello@brianfaust.de",
+        "homepage": "https://brianfaust.de"
+    }],
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "5.3.*",
+        "faustbrian/laravel-service-provider": "^1.0",
+        "doctrine/dbal": "^2.5",
+        "zircote/swagger-php": "^2.0"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.2",
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrianFaust\\Swagger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianFaust\\Tests\\Swagger\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
