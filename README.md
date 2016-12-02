@@ -13,9 +13,7 @@ $ composer require faustbrian/laravel-swagger
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Swagger\SwaggerServiceProvider::class
-];
+BrianFaust\Swagger\SwaggerServiceProvider::class
 ```
 
 To get started, you'll need to publish the vendor assets:
