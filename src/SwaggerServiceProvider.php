@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Swagger;
 
 use BrianFaust\ServiceProvider\ServiceProvider;
@@ -18,7 +20,7 @@ class SwaggerServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application events.
      */
-    public function boot()
+    public function boot(): void
     {
         $this->publishConfig();
         $this->publishViews();
@@ -31,7 +33,7 @@ class SwaggerServiceProvider extends ServiceProvider
     /**
      * Register the service provider.
      */
-    public function register()
+    public function register(): void
     {
         parent::register();
 
@@ -45,7 +47,7 @@ class SwaggerServiceProvider extends ServiceProvider
      *
      * @return string
      */
-    protected function getPackageName()
+    protected function getPackageName(): string
     {
         return 'laravel-swagger';
     }
