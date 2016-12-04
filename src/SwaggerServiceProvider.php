@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Swagger;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class SwaggerServiceProvider extends ServiceProvider
+class SwaggerServiceProvider extends AbstractServiceProvider
 {
     /**
      * Bootstrap the application events.
