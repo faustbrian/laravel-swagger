@@ -30,7 +30,7 @@ use Symfony\Component\Finder\Finder;
 
 class Generator
 {
-    use \Illuminate\Console\AppNamespaceDetectorTrait;
+    use \Illuminate\Console\DetectsApplicationNamespace;
 
     public function generateDocs()
     {
