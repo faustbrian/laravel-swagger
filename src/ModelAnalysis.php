@@ -56,7 +56,7 @@ class ModelAnalysis
                 foreach ($list as $item) {
                     $data = [
                         'property' => $item,
-                        'type' => $this->getColumnType($obj->getTable(), $item),
+                        'type'     => $this->getColumnType($obj->getTable(), $item),
                     ];
 
                     if ($default = $this->getColumnDefault($obj->getTable(), $item)) {
@@ -70,7 +70,7 @@ class ModelAnalysis
                     $class = get_class($obj->{$item}()->getModel());
                     $properties[] = new Property([
                         'property' => $item,
-                        'ref' => '#/definitions/'.class_basename($class),
+                        'ref'      => '#/definitions/'.class_basename($class),
                     ]);
                 }
 
