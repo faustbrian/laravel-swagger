@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Swagger.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Swagger\Console;
+namespace BrianFaust\Swagger\Console\Commands;
 
 use Illuminate\Console\Command;
 use L5Swagger\Generator;

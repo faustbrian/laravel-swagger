@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Swagger.
  *
@@ -41,7 +38,7 @@ class Generator
             $excludeDirs = config('laravel-swagger.paths.excludes');
             $swagger = $this->scan($appDir, [
                 'exclude' => $excludeDirs,
-                'models'  => $this->getModels(),
+                'models' => $this->getModels(),
             ]);
 
             if (config('laravel-swagger.paths.base') !== null) {

@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Swagger.
  *
@@ -14,42 +11,39 @@ declare(strict_types=1);
 
 namespace BrianFaust\Swagger;
 
-use BrianFaust\ServiceProvider\AbstractServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class SwaggerServiceProvider extends AbstractServiceProvider
+class SwaggerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application events.
      */
-    public function boot(): void
+    public function boot()
     {
-        $this->publishConfig();
-        $this->publishViews();
-        $this->publishAssets();
+        $this->publishes([
+            __DIR__.'/../config/laravel-swagger.php' => config_path('laravel-swagger.php'),
+        ], 'config');
 
-        $this->loadViews();
-        $this->loadRoutes();
+        $this->publishes([
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/laravel-swagger'),
+        ], 'views');
+
+        $this->publishes([
+            __DIR__.'/../public/assets' => public_path('vendor/laravel-swagger'),
+        ], 'public');
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-swagger');
+
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 
     /**
      * Register the service provider.
      */
-    public function register(): void
+    public function register()
     {
-        parent::register();
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-swagger.php', 'laravel-swagger');
 
-        $this->mergeConfig();
-
-        $this->commands(Console\GenerateDocsCommand::class);
-    }
-
-    /**
-     * Get the default package name.
-     *
-     * @return string
-     */
-    protected function getPackageName(): string
-    {
-        return 'laravel-swagger';
+        $this->commands(Console\Commands\GenerateDocsCommand::class);
     }
 }
