@@ -38,7 +38,7 @@ class Generator
             $excludeDirs = config('laravel-swagger.paths.excludes');
             $swagger = $this->scan($appDir, [
                 'exclude' => $excludeDirs,
-                'models'  => $this->getModels(),
+                'models' => $this->getModels(),
             ]);
 
             if (config('laravel-swagger.paths.base') !== null) {
