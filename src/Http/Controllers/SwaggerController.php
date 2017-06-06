@@ -74,14 +74,14 @@ class SwaggerController extends BaseController
         // Need the / at the end to avoid CORS errors on Homestead systems.
         $response = response(
             view('laravel-swagger::index', [
-                'apiKey' => config('laravel-swagger.api.auth_token'),
-                'apiKeyVar' => config('laravel-swagger.api.key_var'),
+                'apiKey'             => config('laravel-swagger.api.auth_token'),
+                'apiKeyVar'          => config('laravel-swagger.api.key_var'),
                 'securityDefinition' => config('laravel-swagger.api.security_definition'),
-                'apiKeyInject' => config('laravel-swagger.api.key_inject'),
-                'secure' => $request->secure(),
-                'urlToDocs' => route('laravel-swagger.docs', config('laravel-swagger.paths.docs_json', 'api-docs.json')),
-                'requestHeaders' => config('laravel-swagger.headers.request'),
-                'docExpansion' => config('laravel-swagger.docExpansion'),
+                'apiKeyInject'       => config('laravel-swagger.api.key_inject'),
+                'secure'             => $request->secure(),
+                'urlToDocs'          => route('laravel-swagger.docs', config('laravel-swagger.paths.docs_json', 'api-docs.json')),
+                'requestHeaders'     => config('laravel-swagger.headers.request'),
+                'docExpansion'       => config('laravel-swagger.docExpansion'),
                 'highlightThreshold' => config('laravel-swagger.highlightThreshold'),
 
                 'assetsPath' => config('laravel-swagger.paths.assets_public'),
