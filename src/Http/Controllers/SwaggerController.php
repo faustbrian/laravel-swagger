@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Swagger\Http\Controllers;
 
-use BrianFaust\Swagger\Generator;
 use File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use BrianFaust\Swagger\Generator;
 use Illuminate\Routing\Controller as BaseController;
 
 class SwaggerController extends BaseController
@@ -29,13 +29,13 @@ class SwaggerController extends BaseController
     public function docs(Request $request, $jsonFile = null)
     {
         $filePath = config('laravel-swagger.paths.docs').'/'.
-            (!is_null($jsonFile) ? $jsonFile : config('laravel-swagger.paths.docs_json', 'api-docs.json'));
+            (! is_null($jsonFile) ? $jsonFile : config('laravel-swagger.paths.docs_json', 'api-docs.json'));
 
         if (File::extension($filePath) === '') {
             $filePath .= '.json';
         }
 
-        if (!File::exists($filePath)) {
+        if (! File::exists($filePath)) {
             abort(404, 'Cannot find '.$filePath);
         }
 
@@ -90,7 +90,7 @@ class SwaggerController extends BaseController
         );
 
         $headersView = config('laravel-swagger.headers.view');
-        if (is_array($headersView) and !empty($headersView)) {
+        if (is_array($headersView) and ! empty($headersView)) {
             foreach ($headersView as $key => $value) {
                 $response->header($key, $value);
             }

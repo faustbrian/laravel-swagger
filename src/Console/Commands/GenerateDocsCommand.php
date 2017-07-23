@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Swagger\Console\Commands;
 
-use Illuminate\Console\Command;
 use L5Swagger\Generator;
+use Illuminate\Console\Command;
 
 class GenerateDocsCommand extends Command
 {
