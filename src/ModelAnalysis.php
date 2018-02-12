@@ -14,13 +14,13 @@ declare(strict_types=1);
 namespace BrianFaust\Swagger;
 
 use DB;
-use Schema;
-use ReflectionClass;
-use Swagger\Context;
-use Swagger\Analysis;
-use Swagger\Annotations\Property;
-use Swagger\Annotations\Definition;
 use Illuminate\Database\Eloquent\Model;
+use ReflectionClass;
+use Schema;
+use Swagger\Analysis;
+use Swagger\Annotations\Definition;
+use Swagger\Annotations\Property;
+use Swagger\Context;
 
 class ModelAnalysis
 {
