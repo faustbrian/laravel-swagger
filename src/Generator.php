@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Swagger;
 
-use File;
 use Config;
+use File;
 use Swagger\Analysis;
 use Swagger\Annotations\Swagger;
 use Symfony\Component\Finder\Finder;
@@ -28,7 +28,7 @@ class Generator
         $appDir = config('laravel-swagger.paths.annotations');
         $docDir = config('laravel-swagger.paths.docs');
 
-        if (! File::exists($docDir) || is_writable($docDir)) {
+        if (!File::exists($docDir) || is_writable($docDir)) {
             // delete all existing documentation
             if (File::exists($docDir)) {
                 File::deleteDirectory($docDir);
@@ -54,7 +54,7 @@ class Generator
 
     private function defineConstants(array $constants)
     {
-        if (! empty($constants)) {
+        if (!empty($constants)) {
             foreach ($constants as $key => $value) {
                 defined($key) || define($key, $value);
             }

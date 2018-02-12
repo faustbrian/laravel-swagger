@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Swagger\Console\Commands;
 
-use L5Swagger\Generator;
 use Illuminate\Console\Command;
+use L5Swagger\Generator;
 
 class GenerateDocsCommand extends Command
 {
