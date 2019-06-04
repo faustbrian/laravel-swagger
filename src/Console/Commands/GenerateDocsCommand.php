@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Swagger.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Swagger\Console\Commands;
+namespace Artisanry\Swagger\Console\Commands;
 
 use Illuminate\Console\Command;
 use L5Swagger\Generator;

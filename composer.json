@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-swagger",
+    "name": "artisanry/swagger",
     "description": "Swagger UI Integration for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-Swagger", "Laravel Swagger", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Swagger", "Laravel Swagger"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Swagger\\": "src/"
+            "Artisanry\\Swagger\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Swagger\\": "tests"
+            "Artisanry\\Tests\\Swagger\\": "tests"
         }
     },
     "config": {
@@ -39,7 +39,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Swagger\\SwaggerServiceProvider"
+                "Artisanry\\Swagger\\SwaggerServiceProvider"
             ]
         }
     },
